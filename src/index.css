@@ -8,11 +8,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  display: flex;
+}
+
 .joke-section {
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
   padding: 5px;
+}
+
+.joke-list {
+  list-style: none;
 }
 
 .joke-writing {

@@ -1,32 +1,26 @@
 import JokeInput from "./JokeInput";
-import Setlists from "./Setlists";
+import Setlist from "./Setlist";
 import Jokes from "./Jokes";
 import { useState } from "react";
 
 const initialJokes = [
-  { name: "korea", text: "You know the joke...", rating: 4 },
-  { name: "sponge", text: "I got sponge money", rating: 5 },
-  { name: "lenscrafters", text: "college job", rating: 2 },
-];
-
-const categories = [
-  { name: "silly", color: "#ffffff" },
-  { name: "sarcastic", color: "#c4c466" },
-  { name: "cool", color: "#111" },
+  { id: 1, name: "korea", text: "You know the joke...", rating: 4 },
+  { id: 2, name: "sponge", text: "I got sponge money", rating: 5 },
+  { id: 3, name: "lenscrafters", text: "college job", rating: 2 },
 ];
 
 function App() {
   const [jokes, setJokes] = useState(initialJokes);
-  const [setlists, setSetlists] = useState([[initialJokes]]);
+  const [setlist, setSetlist] = useState(initialJokes);
 
   return (
-    <div>
+    <div className="container">
       <div className="joke-section">
         <JokeInput jokes={jokes} setJokes={setJokes} />
-        <Jokes jokes={jokes} />
+        <Jokes jokes={jokes} setlist={setlist} setSetlist={setSetlist} />
       </div>
       <div>
-        <Setlists setlists={setlists} />
+        <Setlist jokes={setlist} setSetlist={setSetlist} />
       </div>
     </div>
   );

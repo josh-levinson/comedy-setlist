@@ -9,6 +9,7 @@ export default function JokeInput({ jokes, setJokes }) {
     e.preventDefault();
 
     const newJoke = {
+      id: crypto.randomUUID(),
       name: jokeName,
       text: jokeText,
       rating: Number(jokeRating),
