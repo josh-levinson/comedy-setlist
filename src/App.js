@@ -14,15 +14,15 @@ function App() {
   const [setlist, setSetlist] = useState(initialJokes);
 
   return (
-    <div className="container">
-      <div className="joke-section">
+    <main>
+      <div className="jokes">
         <JokeInput jokes={jokes} setJokes={setJokes} />
         <Jokes jokes={jokes} setlist={setlist} setSetlist={setSetlist} />
       </div>
-      <div>
+      <div className="setlist">
         <Setlist jokes={setlist} setSetlist={setSetlist} />
       </div>
-    </div>
+    </main>
   );
 }
 
