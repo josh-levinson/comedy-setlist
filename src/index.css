@@ -39,10 +39,15 @@ h4 {
 .joke-list {
   list-style: none;
   margin-left: 0;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .joke-input {
   width: 20em;
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 5px;
 
   form {
     display: flex;
