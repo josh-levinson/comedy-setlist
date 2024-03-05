@@ -24,35 +24,40 @@ export default function JokeInput({ jokes, setJokes }) {
   return (
     <div className="joke-input">
       <form onSubmit={handleCreate}>
-        <label>Name</label>
-        <input
-          type="text"
-          value={jokeName}
-          onChange={(e) => setJokeName(e.target.value)}
-          placeholder="Name of joke"
-        />
-
-        <label>Text (optional)</label>
-        <textarea
-          rows="5"
-          placeholder="Text ofjoke..."
-          value={jokeText}
-          onChange={(e) => setJokeText(e.target.value)}
-        />
-
-        <label>Rating</label>
-        <select
-          value={jokeRating}
-          onChange={(e) => setJokeRating(e.target.value)}
-        >
-          <option value="1">⭐</option>
-          <option value="2">⭐⭐</option>
-          <option value="3">⭐⭐⭐</option>
-          <option value="4">⭐⭐⭐⭐</option>
-          <option value="5">⭐⭐⭐⭐⭐</option>
-        </select>
-
-        <button>Create</button>
+        <div className="joke-input-field">
+          <label>Name</label>
+          <input
+            type="text"
+            value={jokeName}
+            onChange={(e) => setJokeName(e.target.value)}
+            placeholder="Joke title"
+            required
+          />
+        </div>
+        <div className="joke-input-field">
+          <label>Text</label>
+          <textarea
+            rows="5"
+            cols="40"
+            placeholder="Text of joke..."
+            value={jokeText}
+            onChange={(e) => setJokeText(e.target.value)}
+          />
+        </div>
+        <div className="joke-input-field">
+          <label>Rating</label>
+          <select
+            value={jokeRating}
+            onChange={(e) => setJokeRating(e.target.value)}
+          >
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+          </select>
+        </div>
+        <button className="create-joke-btn">Create</button>
       </form>
     </div>
   );

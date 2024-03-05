@@ -7,8 +7,8 @@ export default function Setlist({ jokes, setSetlist }) {
     <div className="setlist">
       {jokes.map((joke) => (
         <div className="setlist-joke">
-          {joke.name}
-          <button onClick={() => handleRemoveJoke(joke.id)}>X</button>
+          <span className="setlist-joke-name">{joke.name}</span>
+          <button onClick={() => handleRemoveJoke(joke.id)}>❌</button>
         </div>
       ))}
     </div>

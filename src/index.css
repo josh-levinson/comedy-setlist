@@ -1,18 +1,31 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   width: 80%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(241, 236, 236);
 }
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 40px auto;
-  width: 60%;
+  width: 80%;
+  background-color: rgb(223, 219, 214);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+label {
+  margin: auto 12px auto 0;
+  font-size: 1.2rem;
+}
+
+h4 {
+  margin: 2px 0;
 }
 
 .jokes {
@@ -20,25 +33,59 @@ main {
   flex-direction: column;
   margin: 10px 20px;
   padding: 10px;
+  width: 60%;
 }
 
 .joke-list {
   list-style: none;
-}
-
-.joke-writing {
-  font-size: 0.8rem;
+  margin-left: 0;
 }
 
 .joke-input {
   width: 20em;
+
   form {
     display: flex;
     flex-direction: column;
   }
 }
 
+.create-joke-btn {
+  margin: 10px auto 0 auto;
+  width: 40%;
+  font-size: 1.1rem;
+  background-color: green;
+  color: white;
+}
+
+.joke-input-field {
+  padding: 8px;
+}
+
+.joke-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+
+}
+
+.joke-text {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.add-to-setlist-btn {
+  background-color: green;
+  color: white;
+}
+
+.delete-joke-btn {
+  background-color: red;
+  color: white;
+}
+
 .setlist {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -50,5 +97,10 @@ main {
   padding: 5px 10px;
   margin: 3px 0;
   width: auto;
-  background-color: cornflowerblue;
+  background-color: rgb(163, 173, 190);
+  border-radius: 5px;
+}
+
+.setlist-joke-name {
+  margin-right: 12px;
 }

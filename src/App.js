@@ -17,7 +17,7 @@ function App() {
     <main>
       <div className="jokes">
         <JokeInput jokes={jokes} setJokes={setJokes} />
-        <Jokes jokes={jokes} setlist={setlist} setSetlist={setSetlist} />
+        <Jokes jokes={jokes} setJokes={setJokes} setlist={setlist} setSetlist={setSetlist} />
       </div>
       <div className="setlist">
         <Setlist jokes={setlist} setSetlist={setSetlist} />
