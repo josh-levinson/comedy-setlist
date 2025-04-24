@@ -4,10 +4,7 @@ export interface Joke {
   content: string
   rating: number
   notes: string
-  duration: {
-    minutes: number
-    seconds: number
-  }
+  duration: string // Supabase interval format (HH:MM:SS)
   created_at: string
   updated_at: string
 }

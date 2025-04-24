@@ -17,7 +17,7 @@ export default async function Jokes() {
         </thead>
         <tbody>
           {jokes?.map((joke) => (
-            <Joke key={joke.id} {...joke} />
+            <Joke key={joke.id} joke={joke} />
           ))}
         </tbody>
       </table>
